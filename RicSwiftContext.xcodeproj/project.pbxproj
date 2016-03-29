@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18154C411C9F66F000593C96 /* RicContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18154C411C9F66F000593C96 /* RicSwiftContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicSwiftContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18154C441C9F66F000593C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18154C461C9F66F000593C96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18154C491C9F66F000593C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		18154C421C9F66F000593C96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18154C411C9F66F000593C96 /* RicContext.app */,
+				18154C411C9F66F000593C96 /* RicSwiftContext.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18154C401C9F66F000593C96 /* RicContext */ = {
+		18154C401C9F66F000593C96 /* RicSwiftContext */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18154C531C9F66F000593C96 /* Build configuration list for PBXNativeTarget "RicContext" */;
+			buildConfigurationList = 18154C531C9F66F000593C96 /* Build configuration list for PBXNativeTarget "RicSwiftContext" */;
 			buildPhases = (
 				18154C3D1C9F66F000593C96 /* Sources */,
 				18154C3E1C9F66F000593C96 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = RicContext;
+			name = RicSwiftContext;
 			productName = RicContext;
-			productReference = 18154C411C9F66F000593C96 /* RicContext.app */;
+			productReference = 18154C411C9F66F000593C96 /* RicSwiftContext.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 18154C3C1C9F66F000593C96 /* Build configuration list for PBXProject "RicContext" */;
+			buildConfigurationList = 18154C3C1C9F66F000593C96 /* Build configuration list for PBXProject "RicSwiftContext" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18154C401C9F66F000593C96 /* RicContext */,
+				18154C401C9F66F000593C96 /* RicSwiftContext */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AmourineTech.RicContext;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RicSwiftContext;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -299,7 +299,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AmourineTech.RicContext;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RicSwiftContext;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -307,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18154C3C1C9F66F000593C96 /* Build configuration list for PBXProject "RicContext" */ = {
+		18154C3C1C9F66F000593C96 /* Build configuration list for PBXProject "RicSwiftContext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18154C511C9F66F000593C96 /* Debug */,
@@ -316,13 +316,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18154C531C9F66F000593C96 /* Build configuration list for PBXNativeTarget "RicContext" */ = {
+		18154C531C9F66F000593C96 /* Build configuration list for PBXNativeTarget "RicSwiftContext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18154C541C9F66F000593C96 /* Debug */,
 				18154C551C9F66F000593C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
