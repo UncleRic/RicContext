@@ -44,14 +44,14 @@ final class RicView:UIView {
     func renderGridLines() {
         let context = UIGraphicsGetCurrentContext()!
         layout.gridLines.forEach {
-            context.strokeLineFrom($0.startPoint, to: $0.endPoint, color: UIColor.gridLine, width: Thickness.gridLine, lineCap: .Butt)
+            context.strokeLineFrom($0.startPoint, to: $0.endPoint, color: UIColor.gridLine, width: Thickness.gridLine, lineCap: .butt)
         }
     }
 
     // -----------------------------------------------------------------------------------------------------
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         renderBorder()
         renderPlatform()
         renderGridLines()
@@ -61,11 +61,11 @@ final class RicView:UIView {
 // ===================================================================================================
 
 final class Renderer {
-    private let context: CGContextRef
+    private let context: CGContext
     //   private let gameBoard: GameBoard
     //   private let layout: GameBoardLayout
     
-    init(context: CGContextRef) {
+    init(context: CGContext) {
         self.context = context
         
     }
@@ -76,13 +76,13 @@ final class Renderer {
 
 private extension UIColor {
     static let
-    gridLine    = UIColor.darkGrayColor(),
-    innerBorder = UIColor.darkGrayColor(),
-    markO       = UIColor.blueColor(),
-    markX       = UIColor.greenColor(),
-    outerBorder = UIColor.whiteColor(),
-    platform    = UIColor.whiteColor(),
-    winningLine = UIColor.redColor()
+    gridLine    = UIColor.darkGray,
+    innerBorder = UIColor.darkGray,
+    markO       = UIColor.blue,
+    markX       = UIColor.green,
+    outerBorder = UIColor.white,
+    platform    = UIColor.white,
+    winningLine = UIColor.red
 }
 
     

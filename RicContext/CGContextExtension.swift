@@ -33,7 +33,7 @@ internal extension CGRect {
     var topLeft:      CGPoint { return CGPoint(x: minX, y: minY) }
     var topRight:     CGPoint { return CGPoint(x: maxX, y: minY) }
     
-    func insetBy(amount: CGFloat) -> CGRect {
+    func insetBy(_ amount: CGFloat) -> CGRect {
         return self.insetBy(dx: amount, dy: amount)
     }
 }
@@ -42,33 +42,33 @@ internal extension CGRect {
 // Utility methods that encapsulate the CoreGraphics API.
 
 internal extension CGContext {
-    func strokeLineFrom(from: CGPoint, to: CGPoint, color: UIColor, width: CGFloat, lineCap: CGLineCap) {
-        CGContextSetStrokeColorWithColor(self, color.CGColor)
-        CGContextSetLineWidth(self, width)
-        CGContextSetLineCap(self, lineCap)
-        CGContextMoveToPoint(self, from.x, from.y)
-        CGContextAddLineToPoint(self, to.x, to.y)
-        CGContextStrokePath(self)
+    func strokeLineFrom(_ from: CGPoint, to: CGPoint, color: UIColor, width: CGFloat, lineCap: CGLineCap) {
+        self.setStrokeColor(color.cgColor)
+        self.setLineWidth(width)
+        self.setLineCap(lineCap)
+        self.moveTo(x: from.x, y: from.y)
+        self.addLineTo(x: to.x, y: to.y)
+        self.strokePath()
     }
     
-    func fillRect(rect: CGRect, color: UIColor) {
-        CGContextSetFillColorWithColor(self, color.CGColor)
-        CGContextFillRect(self, rect)
-        CGContextStrokePath(self)
+    func fillRect(_ rect: CGRect, color: UIColor) {
+        self.setFillColor(color.cgColor)
+        self.fill(rect)
+        self.strokePath()
     }
     
-    func strokeRect(rect: CGRect, color: UIColor, width: CGFloat) {
-        CGContextSetLineWidth(self, width)
-        CGContextSetStrokeColorWithColor(self, color.CGColor)
-        CGContextAddRect(self, rect)
-        CGContextStrokePath(self)
+    func strokeRect(_ rect: CGRect, color: UIColor, width: CGFloat) {
+        self.setLineWidth(width)
+        self.setStrokeColor(color.cgColor)
+        self.addRect(rect)
+        self.strokePath()
     }
     
-    func strokeEllipseInRect(rect: CGRect, color: UIColor, width: CGFloat) {
-        CGContextSetStrokeColorWithColor(self, color.CGColor)
-        CGContextSetLineWidth(self, width)
-        CGContextAddEllipseInRect(self, rect)
-        CGContextStrokePath(self)
+    func strokeEllipseInRect(_ rect: CGRect, color: UIColor, width: CGFloat) {
+        self.setStrokeColor(color.cgColor)
+        self.setLineWidth(width)
+        self.addEllipse(inRect: rect)
+        self.strokePath()
     }
 }
 

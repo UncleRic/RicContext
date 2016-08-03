@@ -90,7 +90,7 @@ final class GameBoardLayout {
     // MARK: - Private Functions
     
     private enum WinningLineOrientation {
-        case Horizontal, Vertical, TopLeftToBottomRight, BottomLeftToTopRight
+        case horizontal, vertical, topLeftToBottomRight, bottomLeftToTopRight
     }
     
 
@@ -106,14 +106,14 @@ final class GameBoardLayout {
     
     // -----------------------------------------------------------------------------------------------------
     
-    private func winningLineOrientationForStartRect(startRect: CGRect, endRect: CGRect) -> WinningLineOrientation {
+    private func winningLineOrientationForStartRect(_ startRect: CGRect, endRect: CGRect) -> WinningLineOrientation {
         let
         x1 = Int(startRect.minX), x2 = Int(endRect.minX),
         y1 = Int(startRect.minY), y2 = Int(endRect.minY)
-        if x1 == x2 { return .Vertical }
-        if y1 == y2 { return .Horizontal }
-        if y1 <  y2 { return .TopLeftToBottomRight }
-        return .BottomLeftToTopRight
+        if x1 == x2 { return .vertical }
+        if y1 == y2 { return .horizontal }
+        if y1 <  y2 { return .topLeftToBottomRight }
+        return .bottomLeftToTopRight
     }
     
 //    private func startPointForRect(rect: CGRect, winningLineOrientation: WinningLineOrientation) -> CGPoint {

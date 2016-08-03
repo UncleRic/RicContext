@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     // MARK: - Action methods
     
     
-    @IBAction func exitAction(sender: UIBarButtonItem) {
+    @IBAction func exitAction(_ sender: UIBarButtonItem) {
         exit(0)
     }
 
