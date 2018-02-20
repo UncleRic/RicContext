@@ -46,8 +46,8 @@ internal extension CGContext {
         self.setStrokeColor(color.cgColor)
         self.setLineWidth(width)
         self.setLineCap(lineCap)
-        self.moveTo(x: from.x, y: from.y)
-        self.addLineTo(x: to.x, y: to.y)
+        self.move(to: CGPoint(x: from.x, y: from.y))
+        self.addLine(to: CGPoint(x: to.x, y: to.y))
         self.strokePath()
     }
     
@@ -67,7 +67,7 @@ internal extension CGContext {
     func strokeEllipseInRect(_ rect: CGRect, color: UIColor, width: CGFloat) {
         self.setStrokeColor(color.cgColor)
         self.setLineWidth(width)
-        self.addEllipse(inRect: rect)
+        self.addEllipse(in: rect)
         self.strokePath()
     }
 }
